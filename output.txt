@@ -1,1 +1,10 @@
-2 4
+lena
+masha
+gena
+zhanna
+timofey
+alla
+petya
+gosha
+rita
+sasha
