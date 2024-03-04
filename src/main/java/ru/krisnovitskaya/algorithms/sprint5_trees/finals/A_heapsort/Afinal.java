@@ -1,5 +1,5 @@
 package ru.krisnovitskaya.algorithms.sprint5_trees.finals.A_heapsort;
-// https://contest.yandex.ru/contest/24810/run-report/108277678/
+// https://contest.yandex.ru/contest/24810/run-report/108452164/
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -84,15 +84,13 @@ public class Afinal {
             return result;
         }
         private void siftUp(int index) {
-            if (index == 1) {
+            if (index <= 1) {
                 return;
             }
 
             int parentIndex = index / 2;
             if (data.get(parentIndex).compareTo(data.get(index)) < 0) {
-                T temp = data.get(parentIndex);
-                data.set(parentIndex, data.get(index));
-                data.set(index, temp);
+                swap(parentIndex, index);
                 siftUp(parentIndex);
             }
         }
@@ -111,11 +109,15 @@ public class Afinal {
             }
 
             if (data.get(indexLargest).compareTo(data.get(index)) > 0) {
-                T temp = data.get(index);
-                data.set(index, data.get(indexLargest));
-                data.set(indexLargest, temp);
+                swap(index, indexLargest);
                 siftDown(indexLargest);
             }
+        }
+
+        private void swap(int index1, int index2){
+            T temp = data.get(index1);
+            data.set(index1, data.get(index2));
+            data.set(index2, temp);
         }
     }
 
