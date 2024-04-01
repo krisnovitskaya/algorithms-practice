@@ -1,5 +1,5 @@
 package ru.krisnovitskaya.algorithms.sprint7_greedy_algorithm.finals.B_same_amonts;
-// https://contest.yandex.ru/contest/25597/run-report/110699357/
+// https://contest.yandex.ru/contest/25597/run-report/110841340/
 
 /* -- ПРИНЦИП РАБОТЫ --
 Алгоритм работы представляет из себя:
@@ -104,8 +104,9 @@ public class BSameAmount {
                     dp[j] = dpPrev[j];
                 }
             }
+            boolean [] temp = dp;
             dpPrev = dp;
-            dp = makeDefaultDp(halfSum + 1);
+            dp = temp;
         }
         return dpPrev[halfSum];
     }

@@ -1,2 +1,3 @@
-abacaba
-abaabc
+pingpong
+ng
+mpi
