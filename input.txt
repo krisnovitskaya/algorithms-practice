@@ -1,3 +1,7 @@
-pingpong
-ng
-mpi
+examiwillpasstheexam
+5
+will
+pass
+the
+exam
+i
